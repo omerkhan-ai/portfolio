@@ -6,8 +6,8 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #0a0a0a;
-    color: #fff;
+    background: #ffffff; /* White background */
+    color: #0066ff;
     text-align: center;
 }
 
@@ -17,7 +17,7 @@ nav {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.1);
+    background: #0066ff; /* Light blue transparent */
     backdrop-filter: blur(10px);
     padding: 12px 40px;
     border-radius: 30px;
@@ -25,7 +25,7 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 102, 255, 0.3);
     width: auto;
     min-width: 320px;
     max-width: 80%;
@@ -33,7 +33,7 @@ nav {
 }
 
 nav a {
-    color: #00ffc3;
+    color: #0066ff; /* Eccentric blue */
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease, transform 0.2s ease-in-out;
@@ -42,15 +42,15 @@ nav a {
 }
 
 nav a:hover {
-    color: #fff;
+    color: #ffffff; /* Black */
     transform: scale(1.1);
 }
 
 /* Header */
 header {
     padding: 100px 20px;
-    background: linear-gradient(135deg, #1e1e1e, #121212);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ffffff, #e6f0ff);
+    box-shadow: 0px 4px 10px rgba(0, 102, 255, 0.3);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     animation: fadeIn 1.2s ease-in-out;
@@ -60,11 +60,12 @@ h1 {
     font-size: 3rem;
     font-weight: 600;
     margin: 10px 0;
+    color: #0066ff;
 }
 
 p {
     font-size: 1.2rem;
-    color: #bbb;
+    color: #0066ff;
 }
 
 /* Sections */
@@ -79,10 +80,11 @@ section {
 
 h2 {
     font-size: 2rem;
-    border-bottom: 2px solid #00ffc3;
+    border-bottom: 2px solid #0066ff;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 20px;
+    color: #0066ff;
 }
 
 /* Profile Picture */
@@ -93,17 +95,18 @@ h2 {
     display: block;
     margin: 20px auto;
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 255, 195, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 102, 255, 0.3);
     transition: transform 0.3s ease-in-out;
 }
 
 .profile-pic:hover {
-    transform: rotate(10deg) scale(1.05);
+    transform: scale(1.08); /* Slight zoom instead of rotation */
 }
+
 
 /* Project Section */
 .project {
-    background: rgba(255, 255, 255, 0.1);
+    background:#e6f0ff; 
     backdrop-filter: blur(10px);
     padding: 20px;
     margin: 20px 0;
@@ -113,23 +116,23 @@ h2 {
 
 .project:hover {
     transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 255, 195, 0.3);
+    box-shadow: 0px 8px 20px rgba(0, 102, 255, 0.3);
 }
 
 .project a {
-    color: #00ffc3;
+    color: #0066ff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .project a:hover {
-    color: #fff;
+    color: #00f7ff;
 }
 
 /* Contact Form */
 #contact {
-    background: rgba(255, 255, 255, 0.1);
+    background: #deebff;
     backdrop-filter: blur(10px);
     padding: 30px 20px;
     border-radius: 10px;
@@ -154,8 +157,8 @@ input, textarea {
     border: none;
     border-radius: 5px;
     font-size: 1rem;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background: #0066ff;
+    color: #ffffff;
     outline: none;
 }
 
@@ -165,8 +168,8 @@ textarea {
 }
 
 button {
-    background: #00ffc3;
-    color: #0a0a0a;
+    background: #0066ff;
+    color: #fff;
     border: none;
     padding: 12px;
     font-size: 1rem;
@@ -177,12 +180,12 @@ button {
 }
 
 button:hover {
-    background: #fff;
+    background: #0047b3;
 }
 
 /* Social Section */
 #social {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 102, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 30px 20px;
     border-radius: 10px;
@@ -196,7 +199,7 @@ button:hover {
 }
 
 #social a {
-    color: #00ffc3;
+    color: #0066ff;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -207,13 +210,13 @@ button:hover {
 }
 
 #social a:hover {
-    color: #fff;
+    color: #000;
 }
 
 #social a img {
     width: 32px;
     height: 32px;
-    filter: drop-shadow(0px 0px 5px rgba(0, 255, 195, 0.5));
+    filter: drop-shadow(0px 0px 5px rgba(0, 102, 255, 0.5));
 }
 
 /* Animations */
@@ -251,47 +254,49 @@ button:hover {
         font-size: 1rem;
     }
 }
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-    #social {
-        padding: 20px;
-    }
-    #social a {
-        flex-direction: column;
-        gap: 5px;
-    }
-    #social a img {
-        width: 28px;
-        height: 28px;
-    }
-}/* Adjust section padding for smaller screens */
+
 @media (max-width: 600px) {
     section {
         padding: 50px 15px;
     }
-}/* Responsive Typography Adjustments */
-@media (max-width: 600px) {
+
     h1 {
         font-size: 2rem;
     }
+
     h2 {
         font-size: 1.5rem;
     }
+
     p {
         font-size: 1rem;
     }
-}/* Responsive Navigation for Mobile */
+}
+
+/* Responsive Navigation for Mobile */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        gap: 15px;
-        padding: 10px;
-        width: 90%;
+        gap: 10px; /* Reduce gap */
+        padding: 12px;
+        width: 95%;
     }
+
     nav a {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        padding: 5px 0; /* Add spacing for touch-friendly navigation */
+    }
+}
+
+body {
+    animation: fadeInPage 0.8s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
