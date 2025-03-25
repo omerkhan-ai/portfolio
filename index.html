@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="favicon.ico">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omer Khan Lodhi - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #0066ff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0px 4px 10px #0066ff;
+        }
+        nav a {
+            color: #0066ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #161538;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto;
+            border: 3px solid #0066ff;
+            box-shadow: 0 0 15px #003380;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .project {
+            background-color: #e6f0ff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 80%;
+            box-shadow: 0px 4px 10px #002152;
+        }
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #0066ff;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .project a:hover {
+            background-color: #ffffff;
+            color: #0066ff;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        input, textarea {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background: #ffffff;
+            color: #70a9ff;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0066ff;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #ffffff;
+            color: #0066ff;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <header>
+        <h1>Omer Khan Lodhi</h1>
+        <p>Freelance Front-End Web Developer | Crafting Sleek & Modern Websites</p>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="pfp.jpg" alt="Omer Khan Lodhi - Profile Picture" class="profile-pic">
+        <p>Hi, I'm Omer Khan Lodhi, a creative and detail-oriented front-end web developer with a passion for designing modern, interactive, and user-friendly websites. I specialize in turning ideas into functional, visually appealing digital experiences. Let’s build something amazing together!</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Paddle Racket E-Commerce Store</h3>
+            <p>Designed and developed a fast, responsive, and visually compelling e-commerce store for a paddle racket brand. Features include an intuitive UI, smooth animations, and seamless checkout experience.</p>
+            <a href="https://omerkhan-ai.github.io/premeo-mark4/" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+            <h3>Wallet Brand Webstore</h3>
+            <p>Created a minimal and elegant online store for a premium wallet brand, featuring high-quality product displays and a seamless user experience.</p>
+            <a href="#">View Project</a>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Interested in working together? Let's connect!</p>
+        <form action="mailto:khanlodhi283@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>
+          
+            </a>
+        </p>
+    </section>
+    
+    
+     
+    
+    <div id="social">
+        <h2>Let's Connect</h2>
+        <p>Follow me on Instagram and reach out via email.</p>
+    
+        <a href="https://instagram.com/omer.khan.io" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg" alt="Instagram">
+            @omer.khan.io
+        </a>
+    
+        <a href="mailto:khanlodhi283@gmail.com" class="email-link">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt="Email">
+            khanlodhi283@gmail.com
+        </a>
+    </div>
+    
+    
+</body>
+</html>
