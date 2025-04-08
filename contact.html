@@ -37,13 +37,21 @@
 <body>
   <div class="contact-container">
     <!-- Inquiry Form -->
-    <div class="contact-form">
-      <h2>Online Inquiry</h2>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="if you are looking for a free website pitch me about it and we will work something out" required></textarea>
-      <button type="submit">Send Inquiry</button>
-    </div>
+    <form id="contact-form">
+      <div class="contact-form">
+        <h2>Online Inquiry</h2>
+        <input type="text" name="user_name" id="user_name" placeholder="Your Name" required />
+        <input type="email" name="user_email" id="user_email" placeholder="Your Email" required />
+        <textarea name="message" id="message" placeholder="If you are looking for a free website pitch me about it and we will work something out" required></textarea>
+        <button type="submit">Send Inquiry</button>
+      </div>
+    </form>
+    
+   
+
+            
+
+
 
     <!-- Placeholder for Animated buisnesss -->
     
@@ -88,6 +96,39 @@
         </svg></span></div></a>
   
     <div class="box box4"></div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    
+        
+    <script type="text/javascript">
+// Initialize EmailJS with your public key
+emailjs.init("8xLW0VLMthuCvusTJ");  // Replace with your actual Public Key
+
+// Add event listener to form submission
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevent the default form submission
+
+    // Get form values
+    var name = document.getElementById("user_name").value;
+    var email = document.getElementById("user_email").value;
+    var message = document.getElementById("message").value;
+
+    // Send email via EmailJS with your Service ID and Template ID
+    emailjs.send("service_v5dkktd","template_r7luqtf", {
+        user_name: name,
+        user_email: email,
+        message: message,
+    })
+    .then(function(response) {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();  // Reset form after successful submission
+    }, function(error) {
+        alert("Oops! Something went wrong. Please try again.");
+        console.error("Error sending email:", error);  // Log error in the console
+    });
+});
+</script>
 
 
     
