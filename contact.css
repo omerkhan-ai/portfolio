@@ -10,48 +10,38 @@
     color: #000;
     min-height: 100vh;
     display: flex;
+    
     align-items: center;
     justify-content: center;
     padding: 40px;
   }
-  
-  .contact-container {
-    display: flex;
-    width: 70%;
-    max-width: 100%;
-    gap: 40px;
-    margin-right: 100px;
 
-  }
+  .contact-container {
   
-  .contact-form {
-    flex: 1;
+    flex-wrap: wrap; /* Allows wrapping */
+    justify-content: center; /* Centers the form inside the container */
+    gap: 20px;
+  }
+  #contact-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  
-  .contact-form h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
+    width: 100%;
+    min-width: 300px; /* Ensure the form doesn't shrink too small */
+}
+
+#contact-form input,
+#contact-form textarea {
     padding: 12px;
     font-size: 1rem;
     border: 1px solid #000;
     background: transparent;
     color: #000;
     width: 100%;
-  }
-  
-  .contact-form textarea {
-    resize: vertical;
-    min-height: 120px;
-  }
-  
-  .contact-form button {
+    box-sizing: border-box; /* Ensures padding doesn't alter the width */
+}
+
+#contact-form button {
     padding: 12px;
     background: #000;
     color: #fff;
@@ -59,15 +49,14 @@
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .contact-form button:hover {
-    background: #333;
-  }
-  
- 
-  
-  
+}
+
+#contact-form button:hover {
+   background: #333;
+}
+
+
+
   
 
   
@@ -332,6 +321,7 @@
   }
   /* Container to stack cards vertically */
 .cards-container {
+  margin-left: 40px;
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the cards horizontally */
