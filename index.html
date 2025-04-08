@@ -1,480 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Omer Khan Lodhi - Front-End Web Developer Portfolio</title>
+      
+        <!-- ✅ SEO Meta Tags -->
+        <meta name="description" content="Omer Khan Lodhi is a creative front-end web developer specializing in modern, responsive, and interactive websites. Explore his portfolio and contact him for web development services." />
+        <meta name="keywords" content="Omer Khan Lodhi, web developer, front-end developer, website design, HTML CSS JavaScript, responsive design, freelance web developer, GSAP animations, modern websites, Pakistan web developer, interactive websites, web development portfolio" />
+        <meta name="author" content="Omer Khan Lodhi" />
+        <meta name="robots" content="index, follow" />
+      
+        <!-- ✅ Open Graph (for social sharing) -->
+        <meta property="og:title" content="Omer Khan Lodhi - Front-End Web Developer" />
+        <meta property="og:description" content="Explore the portfolio of Omer Khan Lodhi – a modern front-end developer crafting interactive and responsive websites." />
+        <meta property="og:url" content="https://www.omerkhan.site/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.omerkhan.site/preview.png" />
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RV0P11Z7VX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RV0P11Z7VX');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omer Khan Lodhi - Portfolio</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.ico">
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Omer Khan Lodhi - Freelance Front-End Web Developer. Crafting sleek, modern, and interactive websites.">
-    <meta name="keywords" content="Web Developer, Front-End Developer, Freelance Developer, HTML, CSS, JavaScript">
-    <meta name="author" content="Omer Khan Lodhi">
-
-    <!-- Open Graph (Social Media Preview) -->
-    <meta property="og:title" content="Omer Khan Lodhi - Portfolio">
-    <meta property="og:description" content="Explore my latest web development projects and contact me for collaboration.">
-    <meta property="og:image" content="https://www.omerkhan.site/social-preview.png">
-    <meta property="og:url" content="https://www.omerkhan.site">
-    <meta property="og:type" content="website">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #ffffff; /* White background */
-            color: #0066ff;
-            text-align: center;
-        }
-
-        /* Floating Navigation */
-        nav {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(135deg, #ffffff, #8cbaff);
-    backdrop-filter: blur(10px);
-    padding: 15px 40px;
-    border-radius: 30px;
-    display: flex;
-    flex-wrap: nowrap; /* Ensures it stays in a single row */
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    box-shadow: 0px 4px 10px rgba(0, 102, 255, 0.3);
-    min-width: 320px;
-    max-width: 80%;
-    height: auto;
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-
-nav a {
-    display: block;
-    padding: 10px 15px;
-    font-size: 1rem;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 700;
-    color: rgba(0, 102, 255, 0.9);
-    transition: color 0.3s ease, transform 0.2s ease-in-out;
-    white-space: nowrap; /* Ensures text doesn’t break */
-}
-
-
-        nav a:hover {
-            color: #000000; /* Black */
-            transform: scale(1.1);
-        }
-
-        /* Header */
-        header {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #ffffff, #e6f0ff);
-            box-shadow: 0px 4px 10px rgba(0, 102, 255, 0.3);
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-            animation: fadeIn 1.2s ease-in-out;
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            margin: 10px 0;
-            color: #0066ff;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: #0066ff;
-        }
-
-        /* Sections */
-        section {
-            padding: 70px 20px;
-            max-width: 900px;
-            margin: auto;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
-        h2 {
-            font-size: 2rem;
-            border-bottom: 2px solid #0066ff;
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-            color: #0066ff;
-        }
-
-        /* Profile Picture */
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            display: block;
-            margin: 20px auto;
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0, 102, 255, 0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .profile-pic:hover {
-            transform: scale(1.08); /* Slight zoom instead of rotation */
-        }
-
-        /* Project Section */
-        .project {
-            background: #e6f0ff;
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 8px 20px rgba(0, 102, 255, 0.3);
-        }
-
-        .project a {
-            color: #0066ff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .project a:hover {
-            color: #00f7ff;
-        }
-
-        /* Contact Form */
-        #contact {
-            background: #deebff;
-            backdrop-filter: blur(10px);
-            padding: 30px 20px;
-            border-radius: 10px;
-            max-width: 600px;
-            margin: auto;
-            transition: transform 0.3s ease;
-        }
-
-        #contact:hover {
-            transform: scale(1.02);
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        input, textarea {
-            width: 95%;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            background: #ffffff;
-            color: #002fff;
-            outline: none;
-        }
-
-        textarea {
-            height: 120px;
-            resize: auto;
-        }
-
-        button {
-            background: #0066ff;
-            color: #fff;
-            border: none;
-            padding: 12px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        button:hover {
-            background: #0047b3;
-        }
-
-        /* Social Section */
-        #social {
-            background: rgba(52, 252, 2, 0.1);
-            backdrop-filter: blur(0px);
-            padding: 30px 20px;
-            border-radius: 10px;
-            max-width: 600px;
-            margin: auto;
-            margin-top: 35px;
-            transition: transform 0.3s ease;
-        }
-
-        #social:hover {
-            transform: scale(1.02);
-        }
-
-        #social a {
-            color: #0066ff;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        #social a:hover {
-            color: #000;
-        }
-
-        #social a img {
-            width: 32px;
-            height: 32px;
-            filter: drop-shadow(0px 0px 5px rgba(0, 102, 255, 0.5));
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 600px) {
-            section {
-                padding: 50px 15px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-        }
-
-        /* Responsive Navigation for Mobile */
-        @media (max-width: 768px) {
-    nav {
-        flex-direction: row; /* Keep links in a row */
-        flex-wrap: wrap; /* Allow wrapping if needed */
-        justify-content: center; /* Center links */
-        gap: 20px; /* Adjust spacing */
-        width: auto; /* Prevent navbar from stretching too much */
-        min-width: 320px;
-        max-width: 90%;
-        padding: 12px 25px;
-    }
-
-    nav a {
-        font-size: 0.9rem; /* Slightly smaller for mobile */
-        padding: 5px 10px; /* More padding for better touch response */
-    }
-}
-
-
-        body {
-            animation: fadeInPage 0.8s ease-in-out;
-        }
-
-        @keyframes fadeInPage {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-    </style> 
+      
+        <!-- ✅ Favicon (Optional) -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+     <link rel="manifest" href="/site.webmanifest">
+      
+        <!-- ✅ Styles -->
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      />
 </head>
 <body>
 
-</head>
-<body>
-
+  <header class="navbar">
+    <a href="index.html" class="logo">
+        <img src="logo-no-background.png" alt="Omer Khan Lodhi Logo"a>
+      
     <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    
-    <header>
-        <h1>Omer Khan Lodhi</h1>
-        <p>Freelance Front-End Web Developer | Crafting Sleek & Modern Websites</p>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="pfp.jpg" alt="Omer Khan Lodhi - Profile Picture" class="profile-pic">
-        <p>Hi, I'm Omer Khan Lodhi, a creative and detail-oriented front-end web developer with a passion for designing modern, interactive, and user-friendly websites. I specialize in turning ideas into functional, visually appealing digital experiences. Let’s build something amazing together!</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        
-        <div class="project">
-            <h3>Paddle Racket E-Commerce Store</h3>
-            <p>Designed and developed a fast, responsive, and visually compelling e-commerce store for a paddle racket brand.</p>
-            <a href="https://omerkhan-ai.github.io/premeo-mark4/" target="_blank">View Project</a>
-        </div>
+  </header>
+  <section class="landing">
+    <div class="hero-content">
+      <h2> OMR </h2>
+      <p>Front-End Web Developer</p>
+      <a href="projects.html" class="learn-more">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">view project</span>
+      </a>
 
-        <div class="project">
-            <h3>Wallet Brand Webstore</h3>
-            <p>Created a minimal and elegant online store for a premium wallet brand.</p>
-            <a href="https://omerkhan-ai.github.io/primepocket/index.html" target="_blank">View Project</a>
-        </div>
 
-        <div class="project">
-            <h3>BOLAGEMA Inline CSS Email Generator</h3>
-            <p>Developed a custom inline CSS email generator for BOLAGEMA.</p>
-            <a href="https://omerkhan-ai.github.io/emailgen/" target="_blank">View Project</a>
-        </div>
-
-        <div class="project">
-            <h3>IQ Test Quiz App</h3>
-            <p>A fun and interactive quiz app to test your IQ and knowledge.</p>
-            <a href="https://omerkhan-ai.github.io/iq-test/" target="_blank">Try the Quiz</a>
-        </div>
-
-          <div class="project">
-            <h3>Pakistan Weather Dashboard</h3>
-            <p>A simple yet dynamic weather dashboard for pakistan to showcase the use 
-                for intigrated api in webpages to dynamically fetch and send data .</p>
-            <a href="https://omerkhan-ai.github.io/weather-dashborad/" target="_blank">open dashboard</a>
-        </div>
-
-    </section>
-    
- 
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Interested in working together? Let's connect!</p>
-            
-            <!-- Contact Form -->
-            <form id="contact-form">
-                <input type="text" name="user_name" id="user_name" placeholder="Your Name" required>
-                <input type="email" name="user_email" id="user_email" placeholder="Your Email" required>
-                <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-        
-    
-    <div id="social">
-        <h2>Let's Connect</h2>
-        <p>Follow me on Instagram and reach out via email.</p>
-    
-        <a href="https://instagram.com/omer.khan.io" target="_blank">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg" alt="Instagram">
-            @omer.khan.io
-        </a>
-
-        <a href="mailto:khanlodhi283@gmail.com" class="email-link">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt="Email">
-            khanlodhi283@gmail.com
-        </a>
+      <a href="contact.html" class="learn-more">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Contact me</span>
+      </a>
+      
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="animations.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <div class="footer-text">
+        OMR | 2024-25
+      </div>
+      
+  </section>
 
-    
-        
-        <script type="text/javascript">
-    // Initialize EmailJS with your public key
-    emailjs.init("8xLW0VLMthuCvusTJ");  // Replace with your actual Public Key
+  <video autoplay muted loop id="bg-video">
+    <source src="background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-    // Add event listener to form submission
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault();  // Prevent the default form submission
 
-        // Get form values
-        var name = document.getElementById("user_name").value;
-        var email = document.getElementById("user_email").value;
-        var message = document.getElementById("message").value;
 
-        // Send email via EmailJS with your Service ID and Template ID
-        emailjs.send("service_v5dkktd","template_r7luqtf", {
-            user_name: name,
-            user_email: email,
-            message: message,
-        })
-        .then(function(response) {
-            alert("Message sent successfully!");
-            document.getElementById("contact-form").reset();  // Reset form after successful submission
-        }, function(error) {
-            alert("Oops! Something went wrong. Please try again.");
-            console.error("Error sending email:", error);  // Log error in the console
-        });
-    });
-</script>
+  
+  
 
-    
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
